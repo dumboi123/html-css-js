@@ -54,9 +54,9 @@ body {
   margin: 0;
 }
 .panel p{
-  font-size: 16px;
-  color: black;
-  padding: 10px;
+font-size: 16px;
+color: black;
+padding: 10px;
 }
 .panel.active {
     flex: 2;
