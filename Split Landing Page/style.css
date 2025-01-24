@@ -17,7 +17,7 @@ h1 {
     font-size: 4rem;
     color: #fff;
     position: absolute;
-    top: 0%;
+    top: -5%;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -39,12 +39,11 @@ h1 {
   height: 100%;
 }
 .left-slide {
-  background-position: right;
+  background-position: left;
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
   /* transition: transform 0.5s ease-in-out; */
-  transform: scaleX(-1);
 }
 .right-slide::before {
   position: absolute;
@@ -79,4 +78,32 @@ h1 {
 
 .hover-right .left-slide {
   width: var(--other-width);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  font-size: 20px;
+  margin: 0px 10px;
+  bottom: 10px;
+  padding: 5px 5px;
+  border-radius: 20px;
+  position: absolute;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); 
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.description.visible {
+  opacity: 1;
+}
+.x {
+  right: 0;
 }
