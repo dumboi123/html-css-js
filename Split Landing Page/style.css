@@ -1,0 +1,82 @@
+:root {
+  --hover-width: 65%;
+  --other-width: 35%;
+  --speed: 1000ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.panel {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  overflow: hidden;
+}
+.left-slide::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.left-slide {
+  background-position: right;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* transition: transform 0.5s ease-in-out; */
+  transform: scaleX(-1);
+}
+.right-slide::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.right-slide {
+  right: 0;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* left: 50%; */
+  /* transition: transform 0.5s ease-in-out; */
+}
+.panel.right-slide,
+.panel.left-slide,
+.panel.right-slide::before,
+.panel.left-slide::before {
+  transition: all var(--speed) ease-in-out;
+}
+.hover-left .left-slide {
+  width: var(--hover-width);
+}
+
+.hover-left .right-slide {
+  width: var(--other-width);
+}
+
+.hover-right .right-slide {
+  width: var(--hover-width);
+}
+
+.hover-right .left-slide {
+  width: var(--other-width);
+}

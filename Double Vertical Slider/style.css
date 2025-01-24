@@ -8,19 +8,19 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  height: 100vh;
+  height: 100vh; /* vh */
 }
 
 .slider-container {
   position: relative;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
+  width: 100vw; /* vw */
+  height: 100vh; /* vh */
 }
 
 .left-slide {
-  height: 100%;
-  width: 35%;
+  height: 100%; /* % */
+  width: 35%; /* % */
   position: absolute;
   top: 0;
   left: 0;
@@ -28,8 +28,8 @@ body {
 }
 
 .left-slide > div {
-  height: 100%;
-  width: 100%;
+  height: 100%; /* % */
+  width: 100%; /* % */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,11 +44,11 @@ body {
 }
 
 .right-slide {
-  height: 100%;
+  height: 100%; /* % */
   position: absolute;
   top: 0;
   left: 35%;
-  width: 65%;
+  width: 65%; /* % */
   transition: transform 0.5s ease-in-out;
 }
 
@@ -56,8 +56,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100%;
-  width: 100%;
+  height: 100%; /* % */
+  width: 100%; /* % */
 }
 
 button {
@@ -90,7 +90,7 @@ button:focus {
   border-bottom-left-radius: 5px;
 }
 
-.slider-container .action-buttons .up-button {
+slider-container .action-buttons .up-button {
   transform: translateY(-100%);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
