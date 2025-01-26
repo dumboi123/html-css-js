@@ -1,59 +1,62 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    background-image: url('bg.jpg');
-    background-position: center;
-    background-size: cover;
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("bg.jpg");
+  background-position: center;
+  background-size: cover;
 }
-.box{
-    width: 160px;
-    height: 160px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: black;
-    margin: 10px;
-    border-style: solid;
+.box {
+  width: 160px;
+  height: 160px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: black;
+  margin: 10px;
+  border-style: solid;
+  position: relative;
 }
 
 .pic {
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    height: 100%;
-    width: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
 }
-.mal{
-    background-image: url('./mal.jpg');
+.mal {
+  background-image: url("./mal.jpg");
 }
-.ziggs{
-    background-image: url('./zigg.png');
+.ziggs {
+  background-image: url("./zigg.png");
 }
-.brand{
-    background-image: url('./brand.webp');
+.brand {
+  background-image: url("./brand.webp");
 }
-.ahri{
-    background-image: url('./Arcade_Ahri_profileicon.png');
+.ahri {
+  background-image: url("./Arcade_Ahri_profileicon.png");
 }
-.corki{
-    background-image: url('./Arcade_Corki_profileicon.png');
+.corki {
+  background-image: url("./Arcade_Corki_profileicon.png");
 }
-.ezreal{
-    background-image: url('./Arcade_Ezreal_profileicon.png');
+.ezreal {
+  background-image: url("./Arcade_Ezreal_profileicon.png");
 }
-.hovered {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-color: white;
-    border-style: dashed;
+.pic.hovered {
+  opacity: 0.5;
+  border-color:white;
+  border-style: dashed;
+}
+.invisible {
+  display: none;
+}
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
   }
-  
-  @media (max-width: 800px) {
-    body {
-      flex-direction: column;
-    }
-  }
+}
